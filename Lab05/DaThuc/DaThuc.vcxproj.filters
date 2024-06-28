@@ -28,10 +28,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="B.txt">
+    <Text Include="A.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="A.txt">
+    <Text Include="B.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

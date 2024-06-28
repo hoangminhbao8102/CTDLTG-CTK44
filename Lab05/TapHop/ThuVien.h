@@ -17,7 +17,7 @@ struct SET
 };
 
 void XuatDS(SET l);
-int File_List(char* f, SET& l);
+void File_List(const char* f, SET& l);
 NODE* GetNode(DataType x);
 void CreatList(SET& l);
 int IsEmpty(SET l);
@@ -58,20 +58,24 @@ int IsEmpty(SET l)
     return 0;
 }
 
-int File_List(char* f, SET& l)
+void File_List(const char* f, SET& l)
 {
     ifstream in(f);
     if (!in)
-        return 0;
+    {
+        cout << "\nLoi mo file!\n";
+        return;
+    }
     CreatList(l);
     DataType x;
+    in >> x;
+    InsertTail(l, x);
     while (!in.eof())
     {
         in >> x;
         InsertTail(l, x);
     }
     in.close();
-    return 1;
 }
 
 void XuatDS(SET l)

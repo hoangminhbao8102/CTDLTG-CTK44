@@ -1,6 +1,6 @@
 ﻿void XuatMenu();
 int ChonMenu(int SoMenu);
-void XuLyMenu(int menu, SET& l);
+void XuLyMenu(int menu, SET& l1, SET& l2);
 
 void XuatMenu()
 {
@@ -36,11 +36,10 @@ int ChonMenu(int SoMenu)
 	return STT;
 }
 
-void XuLyMenu(int menu, SET& l)
+void XuLyMenu(int menu, SET& l1, SET& l2)
 {
-	char filename[MAX];
-	int kq;
-	SET l2;  // Định nghĩa biến l2 một lần duy nhất ở đây
+	DataType x;
+	SET kq;
 	switch (menu)
 	{
 	case 0:
@@ -50,124 +49,67 @@ void XuLyMenu(int menu, SET& l)
 	case 1:
 		system("CLS");
 		cout << "\n1. Nhap du lieu cho tap hop";
-		cout << "Nhap ten file: ";
-		cin >> filename;
-		kq = File_List(filename, l);
-		if (kq)
-			cout << "Da nhap du lieu tu file thanh cong.\n";
-		else
-			cout << "Loi! Khong the mo file.\n";
+		CreatList(l1); // Tạo mới danh sách l1
+		CreatList(l2); // Tạo mới danh sách l2
+		File_List("A.txt", l1); // Đọc file A.txt vào l1
+		File_List("B.txt", l2); // Đọc file B.txt vào l2
 		break;
 	case 2:
 		system("CLS");
 		cout << "\n2. Xem du lieu tap hop\n";
-		XuatDS(l);
+		cout << "Danh sach l1: ";
+		XuatDS(l1);
+		cout << "\nDanh sach l2: ";
+		XuatDS(l2);
 		break;
 	case 3:
 		system("CLS");
 		cout << "\n3. Giao 2 tap hop\n";
-		CreatList(l2);
-		cout << "Nhap ten file cho tap hop thu hai: ";
-		cin >> filename;
-		kq = File_List(filename, l2);
-		if (!kq) {
-			cout << "Loi! Khong the mo file.\n";
-			break;
-		}
-		SET giao = Giao(l, l2);
-		cout << "Tap hop giao: ";
-		XuatDS(giao);
+		kq = Giao(l1, l2);
+		XuatDS(kq);
 		break;
 	case 4:
 		system("CLS");
 		cout << "\n4. Hop 2 tap hop\n";
-		CreatList(l2);
-		cout << "Nhap ten file cho tap hop thu hai: ";
-		cin >> filename;
-		kq = File_List(filename, l2);
-		if (!kq) {
-			cout << "Loi! Khong the mo file.\n";
-			break;
-		}
-		SET hop = Hop(l, l2);
-		cout << "Tap hop hop: ";
-		XuatDS(hop);
+		kq = Hop(l1, l2);
+		XuatDS(kq);
 		break;
 	case 5:
 		system("CLS");
 		cout << "\n5. Hieu 2 tap hop\n";
-		CreatList(l2);
-		cout << "Nhap ten file cho tap hop thu hai: ";
-		cin >> filename;
-		kq = File_List(filename, l2);
-		if (!kq) {
-			cout << "Loi! Khong the mo file.\n";
-			break;
-		}
-		SET hieu = Hieu(l, l2);
-		cout << "Tap hop hieu: ";
-		XuatDS(hieu);
+		kq = Hieu(l1, l2);
+		XuatDS(kq);
 		break;
 	case 6:
 		system("CLS");
 		cout << "\n6. Hieu doi xung 2 tap hop\n";
-		CreatList(l2);
-		cout << "Nhap ten file cho tap hop thu hai: ";
-		cin >> filename;
-		kq = File_List(filename, l2);
-		if (!kq) {
-			cout << "Loi! Khong the mo file.\n";
-			break;
-		}
-		SET hieu_doi_xung = HieuDoiXung(l, l2);
-		cout << "Tap hop hieu doi xung: ";
-		XuatDS(hieu_doi_xung);
+		kq = HieuDoiXung(l1, l2);
+		XuatDS(kq);
 		break;
 	case 7:
 		system("CLS");
 		cout << "\n7. Tich Descartes 2 tap hop\n";
-		CreatList(l2);
-		cout << "Nhap ten file cho tap hop thu hai: ";
-		cin >> filename;
-		kq = File_List(filename, l2);
-		if (!kq) {
-			cout << "Loi! Khong the mo file.\n";
-			break;
-		}
-		cout << "Tich Descartes: ";
-		TichDescartes(l, l2);
+		TichDescartes(l1, l2);
 		break;
 	case 8:
 		system("CLS");
 		cout << "\n8. Kiem tra phan tu co thuoc vao tap hop\n";
-		DataType element;
 		cout << "Nhap phan tu can kiem tra: ";
-		cin >> element;
-		if (IsExist(l, element))
-			cout << "Phan tu " << element << " thuoc tap hop.\n";
-		else
-			cout << "Phan tu " << element << " khong thuoc tap hop.\n";
+		cin >> x; // Giả sử DataType có thể nhập trực tiếp
+		cout << (IsExist(l1, x) ? "Phan tu thuoc l1" : "Phan tu khong thuoc l1") << endl;
+		cout << (IsExist(l2, x) ? "Phan tu thuoc l2" : "Phan tu khong thuoc l2") << endl;
 		break;
 	case 9:
 		system("CLS");
 		cout << "\n9. Kiem tra quan he bao ham giua 2 tap hop\n";
-		CreatList(l2);
-		cout << "Nhap ten file cho tap hop thu hai: ";
-		cin >> filename;
-		kq = File_List(filename, l2);
-		if (!kq) {
-			cout << "Loi! Khong the mo file.\n";
-			break;
-		}
-		if (IsSubset(l, l2))
-			cout << "Tap hop 1 bao ham tap hop 2.\n";
-		else
-			cout << "Tap hop 1 khong bao ham tap hop 2.\n";
+		cout << (IsSubset(l1, l2) ? "l1 la tap con cua l2" : "l1 khong la tap con cua l2") << endl;
+		cout << (IsSubset(l2, l1) ? "l2 la tap con cua l1" : "l2 khong la tap con cua l1") << endl;
 		break;
 	case 10:
 		system("CLS");
 		cout << "\n10. Tinh luc luong tap hop\n";
-		cout << "Luc luong cua tap hop: " << Cardinality(l) << endl;
+		cout << "Cardinality of l1: " << Cardinality(l1) << endl;
+		cout << "Cardinality of l2: " << Cardinality(l2) << endl;
 		break;
 	}
 }

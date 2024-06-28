@@ -16,13 +16,13 @@ int main()
 
 void ChayChuongTrinh()
 {
-	int SoMenu = 10, menu;
-	SET l1, l2;
+	int SoMenu = 11, menu;
+	POLY a, b;
 	do
 	{
 		system("CLS");
 		menu = ChonMenu(SoMenu);
-		XuLyMenu(menu, l1, l2);
+		XuLyMenu(menu, a, b);
 		system("PAUSE");
 	} while (menu > 0);
 }
