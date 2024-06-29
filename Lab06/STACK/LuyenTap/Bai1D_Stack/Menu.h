@@ -1,4 +1,4 @@
-﻿void XuatMenu();
+﻿﻿void XuatMenu();
 int ChonMenu(int SoMenu);
 void XuLyMenu(int menu, STACK& s);
 
@@ -73,12 +73,12 @@ void XuLyMenu(int menu, STACK& s)
 	case 4:
 		system("CLS");
 		cout << "\n4. Huy mot node o dau stack\n";
-		if (!IsEmpty(s)) 
+		if (!IsEmpty(s))
 		{
 			x = Pop(s);
 			cout << "\nDu lieu node bi xoa: " << x << endl;
 		}
-		else 
+		else
 		{
 			cout << "\nStack rong!\n";
 		}
@@ -100,12 +100,12 @@ void XuLyMenu(int menu, STACK& s)
 	case 7:
 		system("CLS");
 		cout << "\n7. Xem du lieu\n";
-		if (!IsEmpty(s)) 
+		if (!IsEmpty(s))
 		{
 			x = Top(s);
 			cout << "\nDu lieu o dau stack: " << x << endl;
 		}
-		else 
+		else
 		{
 			cout << "\nStack rong!\n";
 		}

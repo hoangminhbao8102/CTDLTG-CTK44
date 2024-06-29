@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{30524e0e-652f-4d53-97c1-89fe6cf5872e}</ProjectGuid>
-    <RootNamespace>Lab06Bai1D</RootNamespace>
+    <ProjectGuid>{29d95900-2237-411d-8299-b15c91b21177}</ProjectGuid>
+    <RootNamespace>Bai2DStack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,11 +130,7 @@
     <ClCompile Include="Program.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Menu.h" />
     <ClInclude Include="ThuVien.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

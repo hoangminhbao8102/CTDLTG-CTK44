@@ -1,4 +1,4 @@
-﻿#define MAX 100
+﻿﻿#define MAX 100
 
 typedef int Data;
 
@@ -141,13 +141,13 @@ Data Pop(STACK& s)
 	return x;
 }
 
-int Count(STACK& s, Data x) 
+int Count(STACK& s, Data x)
 {
 	int count = 0;
 	NODE* pNode = s.pHead;
-	while (pNode != nullptr) 
+	while (pNode != nullptr)
 	{
-		if (pNode->info == x) 
+		if (pNode->info == x)
 		{
 			count++;
 		}
@@ -156,29 +156,29 @@ int Count(STACK& s, Data x)
 	return count;
 }
 
-void RemoveAll(STACK& s, Data x) 
+void RemoveAll(STACK& s, Data x)
 {
 	NODE* current = s.pHead;
 	NODE* prev = nullptr;
 
-	while (current != nullptr) 
+	while (current != nullptr)
 	{
-		if (current->info == x) 
+		if (current->info == x)
 		{
-			if (prev == nullptr) 
+			if (prev == nullptr)
 			{ // Node to remove is the head
 				s.pHead = current->pNext;
 				delete current;
 				current = s.pHead;
 			}
-			else 
+			else
 			{
 				prev->pNext = current->pNext;
 				delete current;
 				current = prev->pNext;
 			}
 		}
-		else 
+		else
 		{
 			prev = current;
 			current = current->pNext;
