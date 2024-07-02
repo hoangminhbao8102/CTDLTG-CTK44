@@ -167,12 +167,14 @@ void TrungTo_HauTo(char sin[MAX], char sout[MAX])
 
 // Data type and node structure for postfix evaluation
 typedef int DataInt;
-struct TagNodeInt {
+struct TagNodeInt 
+{
     DataInt info;
     TagNodeInt* pNext;
 };
 typedef TagNodeInt NODEInt;
-struct STACKInt {
+struct STACKInt 
+{
     NODEInt* pHead;
     NODEInt* pTail;
 };
