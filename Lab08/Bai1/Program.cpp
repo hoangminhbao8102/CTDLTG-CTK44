@@ -13,7 +13,7 @@ int main()
 }
 void ChayChuongTrinh()
 {
-	int menu, soMenu = 5;
+	int menu, SoMenu = 5;
 	BTree root = NULL;
 	do
 	{
@@ -22,4 +22,4 @@ void ChayChuongTrinh()
 		cout << endl;
 		system("PAUSE");
 	} while (menu > 0);
-}
+}
