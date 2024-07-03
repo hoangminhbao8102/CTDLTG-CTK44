@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include<conio.h>
+#include <conio.h>
 #include <math.h>
 using namespace std;
 #include "Header.h"
