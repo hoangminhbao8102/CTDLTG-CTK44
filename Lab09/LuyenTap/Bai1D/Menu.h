@@ -44,7 +44,7 @@ void XuLyMenu(int menu, BSTree& root)
 	{
 	case 0:
 		system("CLS");
-		cout << "\0. Thoat khoi chuonbg trinh\n";
+		cout << "\0. Thoat khoi chuong trinh\n";
 		break;
 	case 1:
 		system("CLS");
