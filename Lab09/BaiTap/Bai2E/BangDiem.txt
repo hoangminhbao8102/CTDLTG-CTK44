@@ -1,0 +1,12 @@
+1612045 Nguyen_Tuan_Vo 1980 Lam_Dong 9
+1513452 Tran_Van_Ngoc 1974 Khanh_Hoa 6
+1615332 Le_Thi_Hoa 1974 Binh_Dinh 8
+1522145 Le_Minh 1986 Khanh_Hoa 4
+1614432 Nguyen_Vo 1985 Phu_Yen 4
+1324042 Vo_Ngoc_Hoa 1983 Ha_Noi 4
+1522032 Van_Thi_Hanh 1984 Lam_Dong 9
+1422052 Vo_Ngoc_Thai 1985 Lam_Dong 9
+1513210 Ly_Van_Hoa 1985 Ninh_Thuan 8
+1623045 Tran_Le_Trong 1991 Ha_Noi 4
+1322140 Tran_Minh_Vuong 1990 Binh_Dinh 9
+1430432 Nguyen_Vo 1975 Lam_Dong 5
