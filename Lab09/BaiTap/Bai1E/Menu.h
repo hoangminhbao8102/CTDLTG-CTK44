@@ -6,7 +6,7 @@ void XuatMenu()
 {
 	cout << "\n========HE THONG MENU======";
 	cout << "\n0. Thoat khoi chuong trinh";
-	cout << "\n1. Tao cay nhi phan can doi (tai moi nut, so con trai và so con phai lech nhau khong qua 1)";
+	cout << "\n1. Tao cay nhi phan can doi (tai moi nut, so con trai vÃ  so con phai lech nhau khong qua 1)";
 	cout << "\n2. Xuat cac phan tu tren cay theo thu tu dau (NLR), giua (LNR), cuoi (LRN).";
 	cout << "\n3. Dem so nut cua cay";
 	cout << "\n4. Xac dinh chieu cao cua cay";
@@ -44,7 +44,7 @@ void XuLyMenu(int menu, BSTree& root)
 		break;
 	case 1:
 		system("CLS");
-		cout << "\n1. Tao cay nhi phan can doi (tai moi nut, so con trai và so con phai lech nhau khong qua 1)\n";
+		cout << "\n1. Tao cay nhi phan can doi (tai moi nut, so con trai vÃ  so con phai lech nhau khong qua 1)\n";
 		// Assume there is a function to create a balanced BST (not provided in the initial code)
 		char filename[256];
 		cout << "Nhap ten file: ";
@@ -74,7 +74,7 @@ void XuLyMenu(int menu, BSTree& root)
 		system("CLS");
 		cout << "\n4. Xac dinh chieu cao cua cay\n";
 		cout << "Chieu cao cua cay: " << Height(root) << endl;
-		break;;
+		break;
 	case 5:
 		system("CLS");
 		cout << "\n5. Dem so nut cua cay o muc K\n";
