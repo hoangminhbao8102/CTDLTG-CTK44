@@ -14,4 +14,4 @@ Hoc kì II - Năm 1 (2020 - 2021)<br>
 <strong>Giáo viên hướng dẫn thực hành:</strong> Thầy Nguyễn Minh Hiệp<br>
 <br>
 Link Github: <a href="https://github.com/hoangminhbao8102/CTDLTG-CTK44">hoangminhbao8102/CTDLTG-CTK44</a><br>
-<h1 style="color:red;">SẮP HOÀN THÀNH</h1>
+<h1 style="color:red;">ĐÃ HOÀN THÀNH</h1>
